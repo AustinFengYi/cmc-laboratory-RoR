@@ -1,0 +1,87 @@
+<script type="text/javascript">
+  $(document).ready(function () {
+  var carousel = $("#carousel").waterwheelCarousel({
+    flankingItems: 3,
+    movingToCenter: function ($item) {
+      $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
+    },
+    movedToCenter: function ($item) {
+      $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
+    },
+    movingFromCenter: function ($item) {
+      $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
+    },
+    movedFromCenter: function ($item) {
+      $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
+    },
+    clickedCenter: function ($item) {
+      $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+    }
+  });
+
+  $('#prev').bind('click', function () {
+    carousel.prev();
+    return false
+  });
+
+  $('#next').bind('click', function () {
+    carousel.next();
+    return false;
+  });
+
+  $('#reload').bind('click', function () {
+    newOptions = eval("(" + $('#newoptions').val() + ")");
+    carousel.reload(newOptions);
+    return false;
+  });
+
+  });
+</script>
+
+
+<!-- 內容 research-content-banner -->  
+<section class="research-content-banner">
+  <div class="content-background">
+    <div class="content-banner">
+      <img src="/image/content-banner-1.jpg" alt="">
+    </div>
+  </div> 
+</section>
+
+<!-- 內容 research-content -->  
+<section class="research-content">
+  <div class="container">
+    <h4>研究</h4>
+    
+    <ul class="research-navigation">
+      <li><a href="">研究方向</a></li>
+      <li><a href="">期刊與論文</a></li>   
+    </ul> 
+  </div>
+</section>
+
+<!-- 內容 research-->
+<section class="research">
+  <div class="container">
+    <div id="carousel">
+      <a href="#"><img src="/image/works/w01.jpg" id="item-1" /></a>
+      <a href="#"><img src="/image/works/w02.jpg" id="item-2" /></a>
+      <a href="#"><img src="/image/works/w03.jpg" id="item-3" /></a>
+      <a href="#"><img src="/image/works/w04.jpg" id="item-4" /></a>
+      <a href="#"><img src="/image/works/w05.jpg" id="item-5" /></a>
+      <a href="#"><img src="/image/works/w06.jpg" id="item-6" /></a>
+      <a href="#"><img src="/image/works/w07.jpg" id="item-7" /></a>
+      <a href="#"><img src="/image/works/w08.jpg" id="item-8" /></a>
+      <a href="#"><img src="/image/works/w09.jpg" id="item-9" /></a>
+    </div>
+    
+    <div class="carousel-mark text-center">
+      <a href="#" id="prev">
+        <button type="button" class="btn btn-primary">Prev</button>      
+      </a>
+      <a href="#" id="next">
+       <button type="button" class="btn btn-primary">Next</button>
+      </a>
+    </div>
+  </div>
+</section>

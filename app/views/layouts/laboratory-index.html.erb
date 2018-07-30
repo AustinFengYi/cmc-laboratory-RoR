@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>中興大學-歡迎蒞臨陳志銘教授實驗室</title>
+    <meta charset="utf-8">
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+  <body>
+    <header id="header-primary-labindex">
+      <div class="container">
+        <nav>
+          <div id="logo">
+            <!--logo(80x40)-->
+            <%= link_to root_path do %>
+              <img src="/image/logo.png" alt="">
+            <% end %>
+          </div>
+
+          <ul class="nav-primary">
+            <li><a href="https://www.nchu.edu.tw/index1.php" target="_blank">中興大學</a></li>
+            <li><a href="http://www.engineer.nchu.edu.tw/chinese/" target="_blank">工學院</a></li>
+            <li><a href="http://www.che.nchu.edu.tw/" target="_blank">化學工程學系</a></li>
+            <li><%= link_to"聯絡我們", contact_laboratories_path %></li>
+            <li><%= link_to "管理者登入",admin_root_path %></li>
+            <% if current_user %>
+              <% if current_user.admin? %>
+                <li><%= link_to "修改密碼",edit_user_registration_path %></li>
+                <li><%= link_to "登出",destroy_user_session_path, method: :delete %></li>
+              <% end %>
+            <% end %>
+          </ul>          
+        </nav>
+      </div>
+    </header>
+
+    <header id="header-secondary-labindex">
+      <div class="container">
+        <nav>
+          <ul class="nav-secondary">
+            <li><%= link_to "首頁",root_path %></li>
+            <li><%= link_to "公告事項", announcehomepage_announcements_path %></li>
+            
+            <li><a href="#">實驗室介紹</a>
+              <ul>
+                <li><%= link_to"實驗室簡介",introduction_laboratories_path %></li>
+                <li><%= link_to"儀器設備",introduction_laboratories_path %></li>
+              </ul>
+            </li>
+
+            <li><a href="#">研究</a>
+              <ul>
+                <li><%= link_to"研究方向",research_laboratories_path %></li>
+                <li><%= link_to"期刊與論文",research_laboratories_path %></li>
+              </ul>
+            </li>
+
+            <li><%= link_to "產學合作",companyproject_laboratories_path %></li>
+            
+            <li><a href="#">成員</a>
+              <ul>
+                <li><%= link_to"教授",teamleader_laboratories_path %></li>
+                <li><%= link_to"研究所",teammember_laboratories_path %></li>
+                <li><%= link_to"大學部",teammember_laboratories_path %></li>
+                <li><%= link_to"歷屆成員",teammember_laboratories_path %></li>      
+              </ul>
+            </li>
+
+            <li><%= link_to"生活剪影",album_laboratories_path %></li>
+
+            <li><%= link_to"聯絡我們",contact_laboratories_path %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Homepage Background Image -->
+    <section>
+      <div class="home-bg">
+        <img src="/image/banner-1.jpg" alt="">    
+      </div>
+    </section>    
+
+
+    <%= yield %>
+
+
+    <!-- footer -->
+    <section class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-title">
+            <h4><em>國立中興大學化工系 微電子暨能源材料實驗室</em></h4>
+          </div>
+          <div class="footer-item">
+            <img src="/image/logo-2.png" alt="">
+            <img src="/image/logo.png" alt="">
+          </div>
+          <div class="footer-item">
+            <h3>聯絡我們</h3>
+            <hr>
+            <h5>陳志銘教授實驗室</h5>
+            <h5>通訊地址: 402台中市南區興大路145號化材大樓505室</h5> 
+            <h5>實驗室電話: 886-4-</h5>
+            <h5>教授辦公室電話: 886-4-2285-9458 #514</h5>
+            <h5>教授郵件: chencm@dragon.nchu.edu.tw</h5>
+
+          </div>
+          <div class="footer-item">
+            <h3>友善連結</h3>
+            <hr>
+            <div class="item-left">
+              <div class="item">
+                <a href="http://web.nchu.edu.tw/~cmchen/" target="_blank"><img src="/image/logo-3.png" alt=""><h5>回舊實驗室網站</h5></a>
+              </div>
+
+              <div class="item">
+                <a href="https://www.nchu.edu.tw/index1.php" target="_blank"><img src="/image/logo-3.png" alt=""><h5>興大官方網站</h5></a>
+              </div>
+
+              <div class="item">
+                <a href="http://www.che.nchu.edu.tw/" target="_blank"><img src="/image/logo-3.png" alt=""><h5>興大化學工程學系</h5></a>
+              </div>
+            </div>
+
+            <div class="item-right">
+              <div class="item">
+                <a href="http://safety.nchu.edu.tw/web/" target="_blank"><img src="/image/logo-3.png" alt=""><h5>興大環安衛生中心</h5></a>
+              </div>
+
+              <div class="item">
+                <a href="https://www.osa.nchu.edu.tw/osa/grwork/" target="_blank"><img src="/image/logo-3.png" alt=""><h5>興大生涯發展中心</h5></a>
+              </div>
+              
+              <div class="item">
+                <a href="http://research.nchu.edu.tw/" target="_blank"><img src="/image/logo-3.png" alt=""><h5>興大研究發展處</h5></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-copyright">
+            <p>&copy; 2018 AUSTIN Camp | All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+ 

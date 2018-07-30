@@ -1,0 +1,27 @@
+<section class="admin-show">
+  <div class="container">
+    <div class="col-md-12">
+      
+      <div class="panel panel-primary">
+        <div class="panel-heading panel-title">
+          <strong><%= @announcement.title %></strong>
+        </div>
+
+        <div class="panel-body">
+          <h4><%= simple_format(@announcement.description) %></h4>
+        </div>
+
+        <div class="panel-footer">
+          <h5>發布日期：<%= @announcement.date %></h5>
+        </div>
+      </div>
+
+      <div>
+        <%= link_to '回上頁' ,announcehomepage_announcements_path ,class:"btn btn-primary" %>
+        <!--<button type="button" class="btn btn-default">上一則</button>-->
+     
+        <!--<button type="button" class="btn btn-default">下一則</button>-->
+      </div>
+    </div>
+  </div>
+</section>
