@@ -43,7 +43,8 @@
 <section class="research-content-banner">
   <div class="content-background">
     <div class="content-banner">
-      <img src="/image/content-banner-1.jpg" alt="">
+      <!--img src="/image/content-banner-1.jpg" alt=""-->
+      <%= image_tag ("image/content-banner-1.jpg"), alt: 'avatar' %> 
     </div>
   </div> 
 </section>
@@ -64,7 +65,7 @@
 <section class="research">
   <div class="container">
     <div id="carousel">
-      <a href="#"><img src="/image/works/w01.jpg" id="item-1" /></a>
+      <!--a href="#"><img src="/image/works/w01.jpg" id="item-1"/></a>
       <a href="#"><img src="/image/works/w02.jpg" id="item-2" /></a>
       <a href="#"><img src="/image/works/w03.jpg" id="item-3" /></a>
       <a href="#"><img src="/image/works/w04.jpg" id="item-4" /></a>
@@ -72,7 +73,16 @@
       <a href="#"><img src="/image/works/w06.jpg" id="item-6" /></a>
       <a href="#"><img src="/image/works/w07.jpg" id="item-7" /></a>
       <a href="#"><img src="/image/works/w08.jpg" id="item-8" /></a>
-      <a href="#"><img src="/image/works/w09.jpg" id="item-9" /></a>
+      <a href="#"><img src="/image/works/w09.jpg" id="item-9" /></a-->
+      <%= image_tag ("image/works/w01.jpg"), alt: 'avatar' %>
+      <%= image_tag ("image/works/w02.jpg"), alt: 'avatar' %>
+      <%= image_tag ("image/works/w03.jpg"), alt: 'avatar' %>
+      <%= image_tag ("image/works/w04.jpg"), alt: 'avatar' %>
+      <%= image_tag ("image/works/w05.jpg"), alt: 'avatar' %>
+      <%= image_tag ("image/works/w06.jpg"), alt: 'avatar' %>
+      <%= image_tag ("image/works/w07.jpg"), alt: 'avatar' %>
+      <%= image_tag ("image/works/w08.jpg"), alt: 'avatar' %>
+      <%= image_tag ("image/works/w09.jpg"), alt: 'avatar' %>
     </div>
     
     <div class="carousel-mark text-center">

@@ -18,7 +18,8 @@
           <div id="logo">
             <!--logo(80x40)-->
             <%= link_to root_path do %>
-              <img src="/image/logo.png" alt="">
+              <!--img src="/image/logo.png" alt=""-->
+              <%= image_tag ("image/logo.png"), alt: 'avatar' %>
             <% end %>
           </div> 
 
@@ -113,8 +114,10 @@
             <h4><em>國立中興大學化工系 微電子暨能源材料實驗室</em></h4>
           </div>
           <div class="footer-item">
-            <img src="/image/logo-2.png" alt="">
-            <img src="/image/logo.png" alt="">
+            <!--img src="/image/logo-2.png" alt=""-->
+            <%= image_tag ("image/logo-2.png"), alt: 'avatar' %>
+            <!--img src="/image/logo.png" alt=""-->
+            <%= image_tag ("image/logo.png"), alt: 'avatar' %> 
           </div>
           <div class="footer-item">
             <h3>聯絡我們</h3>
@@ -131,29 +134,29 @@
             <hr>
             <div class="item-left">
               <div class="item">
-                <a href="http://web.nchu.edu.tw/~cmchen/" target="_blank"><img src="/image/logo-3.png" alt=""><h5>回舊實驗室網站</h5></a>
+                <a href="http://web.nchu.edu.tw/~cmchen/" target="_blank"><%= image_tag ("image/logo-3.png"), alt: 'nuhu-logo' %><h5>回舊實驗室網站</h5></a>
               </div>
 
               <div class="item">
-                <a href="https://www.nchu.edu.tw/index1.php" target="_blank"><img src="/image/logo-3.png" alt=""><h5>興大官方網站</h5></a>
+                <a href="https://www.nchu.edu.tw/index1.php" target="_blank"><%= image_tag ("image/logo-3.png"), alt: 'nuhu-logo' %><h5>興大官方網站</h5></a>
               </div>
 
               <div class="item">
-                <a href="http://www.che.nchu.edu.tw/" target="_blank"><img src="/image/logo-3.png" alt=""><h5>興大化學工程學系</h5></a>
+                <a href="http://www.che.nchu.edu.tw/" target="_blank"><%= image_tag ("image/logo-3.png"), alt: 'nuhu-logo' %><h5>興大化學工程學系</h5></a>
               </div>
             </div>
 
             <div class="item-right">
               <div class="item">
-                <a href="http://safety.nchu.edu.tw/web/" target="_blank"><img src="/image/logo-3.png" alt=""><h5>興大環安衛生中心</h5></a>
+                <a href="http://safety.nchu.edu.tw/web/" target="_blank"><%= image_tag ("image/logo-3.png"), alt: 'nuhu-logo' %><h5>興大環安衛生中心</h5></a>
               </div>
 
               <div class="item">
-                <a href="https://www.osa.nchu.edu.tw/osa/grwork/" target="_blank"><img src="/image/logo-3.png" alt=""><h5>興大生涯發展中心</h5></a>
+                <a href="https://www.osa.nchu.edu.tw/osa/grwork/" target="_blank"><%= image_tag ("image/logo-3.png"), alt: 'nuhu-logo' %><h5>興大生涯發展中心</h5></a>
               </div>
               
               <div class="item">
-                <a href="http://research.nchu.edu.tw/" target="_blank"><img src="/image/logo-3.png" alt=""><h5>興大研究發展處</h5></a>
+                <a href="http://research.nchu.edu.tw/" target="_blank"><%= image_tag ("image/logo-3.png"), alt: 'nuhu-logo' %><h5>興大研究發展處</h5></a>
               </div>
             </div>
           </div>
