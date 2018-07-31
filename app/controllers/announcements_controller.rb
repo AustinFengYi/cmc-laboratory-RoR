@@ -10,6 +10,6 @@ class AnnouncementsController < ApplicationController
 
   def announcehomepage
     @announcements = Announcement.order(created_at: :desc)
-    @categories = Category.all
+    @categories = Category.order(created_at: :asc)
   end
 end

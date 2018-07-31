@@ -2,7 +2,7 @@ class Admin::CategoriesController < Admin::BaseController
     before_action :set_category , only:[:update,:destroy]
 
 def index
-  @categories = Category.all
+  @categories = Category.order(created_at: :asc)
   if params[:id]
     #@category = Category.find(params[:id])
     set_category
@@ -12,7 +12,7 @@ def index
 end
 
 def show
-  @categories = Category.all
+  @categories = Category.order(created_at: :asc)
   @category = Category.find(params[:id])
   @announcements = @category.announcements.order(created_at: :desc)
 end
